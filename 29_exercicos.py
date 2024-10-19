@@ -31,6 +31,7 @@ print('A DIVISÃO dos Números n1 e n2 é:',divisao)
 print('O RESTO DA DIVISÃO dos Números n1 e n2 é:',resto)
 print('POTÊNCIA dos Números n1 e expoente n2 é:',potencia)
 print('A MÉDIA dos Números n1, n2 e n3 é:',media)
+
 print('#####################################################')
 print('8- Conversão de temperatura: Celsius para Fahrenheit')
 ############################################################
@@ -40,6 +41,7 @@ print('8- Conversão de temperatura: Celsius para Fahrenheit')
 celsius = float(input('Digite a temperatura em graus CELSIUS: '))
 fahrenheit = (1.8 * celsius) + 32
 print('A Temperatura Celsius para Fahrenheit é:',str(fahrenheit)+'°F')
+
 print('#####################################################')
 print('9- Conversão de REAIS para DÓLARES:')
 #9. Conversão de moeda: Peça um valor em reais e mostre o valor convertido em dólares.
@@ -48,12 +50,14 @@ real = float(input('Digite o valor em REAIS para converter em DÓLARES: '))
 dolar = 5.61
 conversao = real / dolar
 print(f'A Conversão de REAIS para DOLARES é US$:{conversao:.2f}')
+
 print('#####################################################')
 print('10- Área de um RETÂNGULO:')
 #10. Área de um retângulo: Peça a largura e a altura de um retângulo e calcule a área.
-largura = float(input("Digite a Largura do Retângulo:"))
+base = float(input("Digite a Largura do Retângulo:"))
 altura = float(input("Digite a Altura do Retângulo:"))
-print('A Área do RETÂNGULO é:',(largura*altura))
+print('A Área do RETÂNGULO é:',(base * altura))
+
 print('#####################################################')
 print('11- Perímetro de um QUADRADO:')
 # 11. Perímetro de um quadrado: Peça o lado de um quadrado e calcule o perímetro
@@ -61,6 +65,7 @@ print('11- Perímetro de um QUADRADO:')
 lado = float(input("Digite o valor do lado de um Quadrado:"))
 perimetro = lado * 4 
 print('O Perímetro de um QUADRADO é:',perimetro)
+
 print('#####################################################')
 print('12- Área de um TRIÂNGULO:')
 # 12. Área de um triângulo: Peça a base e a altura de um triângulo e calcule a área usando
@@ -69,13 +74,15 @@ base = float(input(" Digite o valor da Base do TRIÂNGULO: "))
 altura = float(input(" Digite o valor da Altura do TRIÂNGULO:"))
 area = (base * altura) / 2
 print('A Área do TRIÂNGULO é:', area)
+
 print('#####################################################')
 print('13- Área de um CÍRCULO:')
 # 13. Área de um círculo: Peça o raio de um círculo e calcule a área usando a fórmula:
 raio = float(input(" Digite o Valor do Raio de um CÍRCULO: "))
 pi = 3.14159
-area = 3.14159 * raio ** raio
+area = 3.14159 * (raio ** 2)
 print(f'A Área de um CÍRCULO é: {area: .2f}')
+
 print('#####################################################')
 print('14- Conversão de METROS para CENTÍMETROS:')
 # 14. Conversão de metros para centímetros: Peça um valor em metros e converta
@@ -83,6 +90,7 @@ print('14- Conversão de METROS para CENTÍMETROS:')
 metros = float(input(" Digite o Valor em METROS: "))
 conversao = metros * 100
 print(f'A Conversão de METROS para CENTÍMETROS é: {conversao:.2f}' +'cm')
+
 print('#####################################################')
 print('15- Cálculo de horas TRABALHADAS:')
 #15. Cálculo de horas trabalhadas: Peça a quantidade de horas trabalhadas e o valor por
@@ -90,6 +98,7 @@ print('15- Cálculo de horas TRABALHADAS:')
 horas = float(input('Digite a Quantidade de Horas TRABALHADAS:'))
 valor = float (input('Digite o valor por horas TRABALHADAS: '))
 print('O valor do SÁLARIO TOTAL é R$:',(horas * valor))
+
 print('#####################################################')
 print('16- Preço com DESCONTO:')
 # 16. Preço com desconto: Peça o preço de um produto e o percentual de desconto, e
@@ -101,6 +110,7 @@ preco_final  = preco_produto - desconto
 print('O Preço do PRODUTO é:', preco_produto)
 print('O valor Percentual de DESCONTO é:', valor_percentual)
 print('O valor do PRODUTO com DESCONTO é:', preco_final)
+
 print('#####################################################')
 print('17- Calcular a VELOCIDADE MÉDIA:')
 #17. Calcular a velocidade média: Peça a distância percorrida e o tempo gasto, e calcule
@@ -109,6 +119,7 @@ distancia = float(input('Digite a DISTÂNCIA percorrida: '))
 tempo = float(input('Digite o TEMPO gasto: '))
 v_media = distancia / tempo
 print('A VELOCIDADE MÉDIA é:', v_media)
+
 print('#####################################################')
 print('18- Converter IDADE em DIAS:')
 # 18. Converter idade em dias: Peça a idade de uma pessoa em anos e converta para dias.
@@ -116,29 +127,37 @@ print('18- Converter IDADE em DIAS:')
 idade = float(input('Digite a IDADE:'))
 idade_dias = idade * 365
 print('A IDADE em DIAS é:', idade_dias)
+
 print('#####################################################')
 print('19- Quantidade de SEGUNDOS em 1 DIA:')
 # 19. Quantidade de segundos em um dia: Calcule quantos segundos existem em um
 #dia (24 horas).
+dias = int(input(" Digite a quantidade de DIAS: "))
+conversao = dias * 24 * 60 * 60
+print(f'A Quantidade de DIAS em SEGUNDOS é:{conversao} segundos')
+
 print('#####################################################')
 print('20- Calcular o IMC (Índice de Massa Corporal):')
 # 20. Calcular o IMC (Índice de Massa Corporal): Peça o peso (em kg) e a altura (em
 #metros), e calcule o IMC usando a fórmula:
-peso = int(input('Digite o PESO em KG:'))
-altura = int(input('Digite a ALTURA:'))
-altura2 = altura ** altura
-imc = peso / altura2
-print(f'o IMC é: {imc: .2f}')
+altura = float(input('Digite a ALTURA: '))
+peso = float(input('Digite o PESO em KG: '))
+print(f'A Altura Digitada é: {altura: .2f}')
+print(f'A Peso  Digitado é: {peso: .2f}')
+imc = peso / altura ** 2
+print(f'O IMC é: {imc: .2f}')
+
 #21. Diferença entre dois números: Peça dois números e mostre a diferença absoluta
 #entre eles (sem sinal negativo).
 print('#####################################################')
-print('21- Diferença entre dois números::')
-numero1 = float(input('Digite o PESO em KG:'))
-numero2 = float(input('Digite a ALTURA:'))
-if numero1 % numero2 and == 0:
-    print(f'o NUMERO1 {numero1: .2f}é PAR')
-else:
-    print(f'o NUMERO2 {numero2: .2f}é IMPAR')
+print('21- Diferença entre dois números: ')
+numero1 = int(input('Digite o Número 1: '))
+numero2 = int(input('Digite o Número 2: '))
+if numero1 == numero2:
+    print(f'O NÚMERO 1 "{numero1}" é IGUAL ao NÚMERO 2 "{numero2}"')
+elif numero1 != numero2:
+    print(f'o NÚMERO 1 "{numero1}" é DIFERENTE DO NÚMERO 2 "{numero2}"')
+
 #22. Divisão inteira de dois números: Peça dois números inteiros e mostre o resultado
 #da divisão inteira (sem considerar o resto).
 print('#####################################################')
@@ -147,11 +166,13 @@ numero1 = int(input('Digite o numero1:'))
 numero2 = int(input('Digite o numero2:'))
 divisao = numero1 // numero2
 print('Divisão inteira de dois números é:', divisao)
+
 #23. Valor absoluto de um número: Peça um número e mostre seu valor absoluto.
 print('#####################################################')
 print('23- Valor absoluto de um número:')
 valor_absoluto = float(input('Digite o numero1:'))
 print('Valor absoluto de um número é:', abs(valor_absoluto))
+
 #24. Converter km/h para m/s: Peça uma velocidade em km/h e converta para m/s. Use a
 #fórmula: #velocidade em m/s=velocidade em km/h3.6\text{velocidade em m/s} =
 #\frac{\text{velocidade em km/h}}{3.6}velocidade em m/s=3.6velocidade em km/h
@@ -160,6 +181,7 @@ print('24- Converter km/h para m/s:')
 velocidade = float(input('Digite a velocidade em KM/H:'))
 conversao = velocidade / 3.6
 print(f'A VELOCIDADE é {conversao} M/S')
+
 #25. Fórmula de Bhaskara: Peça os coeficientes aaa, bbb e ccc de uma equação do
 #segundo grau e calcule as raízes usando a fórmula de Bhaskara.
 print('#####################################################')
@@ -181,6 +203,7 @@ elif delta>0:
         print ("O valor das raizes é: " + str(raiz) + " e " + str(raiz2) )
 else:
         print ("Essa equação não possui raizes reais" )
+
 #26. Valor total de uma compra: Peça o preço de três produtos e calcule o valor total da
 #compra.
 print('#####################################################')
@@ -190,6 +213,7 @@ produto2 = float(input("Digite o valor do produto 2: "))
 produto3 = float(input ("Digite o valor do produto 3: "))
 total = produto1 + produto2 + produto3
 print(f'Valor total da COMPRA é {total: .2f}')
+
 #27. Converter dias para semanas e dias: Peça um valor em dias e converta para
 #semanas e dias (por exemplo, 10 dias = 1 semana e 3 dias).
 print('#####################################################')
@@ -210,6 +234,7 @@ if valor <= 100:
 elif valor >= 500:
   desconto_progressivo = valor - (valor * 0.10) 
   print(f'Valor do desconto progressivo é 10% : {desconto_progressivo: .2f}')
+  
 #29. Divisão com casas decimais limitadas: Peça dois números e mostre o resultado
 #da divisão com apenas duas casas decimais.
 print('#####################################################')
